@@ -1,5 +1,7 @@
 package Comic;
-import li.Screen;
+import li.*;
 public interface ComicACB {
-    void mostrarPagina(Screen s, Pagina p);
+    void mostrarPagina(Screen s, int np);
+
+    void iniciarComic(Screen s, int np);
 }

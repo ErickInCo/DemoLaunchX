@@ -1,5 +1,8 @@
 package Comic;
+
+import li.Colors;
 import li.Screen;
+
 public class Comic implements ComicACB {
     private int id;
     private int nCapitulo;
@@ -74,7 +77,33 @@ public class Comic implements ComicACB {
 
 
     @Override
-    public void mostrarPagina(Screen s, Pagina p) {
+    public void mostrarPagina(Screen s, int np)  {
+        for (int i=0;i<np;i++){
+            s.cls();
+            s.repaint();
+//        s.out(showMsg(), "Helvetica", 28, Colors.BlueHorizon);
+            s.showImage2(p[i].getSrc(),1000,1000);
+            s.setBounds(200, 0, 1200, 1200);
+            try {
+                Thread.sleep(10000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
 
     }
+
+    @Override
+    public void iniciarComic(Screen s, int np) {
+        s.setVisible(true);
+        s.out(getDescripcion(), "Helvetica", 28, Colors.BlueHorizon);
+//        System.out.println(p[0].getSrc());
+        s.showImage(p[0].getSrc());
+        s.setBounds(500, 0, 700, 1200);
+
+        mostrarPagina(s,np);
+
+    }
+
+
 }

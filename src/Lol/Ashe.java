@@ -9,7 +9,8 @@ public class Ashe extends Champion implements AsheActiosnCallbacks {
     public void FROSTSHOT(Screen s) {
         s.setVisible(true);
         s.out(showMsg(), "Helvetica", 28, Colors.BlueHorizon);
-        s.showImage("P.gif");
+//        s.showImage("P.gif");
+        s.showImage("src/Comic/1.jfif");
         s.setBounds(200, 100, 1100, 900);
         System.out.println("Lol.Ashe's attacks slow their target, causing her to deal increased damage to these targets.");
     }
