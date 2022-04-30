@@ -77,10 +77,10 @@ public class Cancion {
 
     @Override
     public String toString() {
-        return "-" +
-                "Titulo:'" + Titulo + '\'' +
-                ", Album:'" + Album + '\'' +
-                ", Artista:'" + Artista + '\'' +
-                "}\n";
+        return "\n" +
+                "Titulo:\t" + Titulo + '\n' +
+                "Album:\t" + Album + '\n' +
+                "Artista:\t" + Artista + '\n' +
+                "\n";
     }
 }

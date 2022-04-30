@@ -76,6 +76,15 @@ public class Concert implements ConcertACB{
         s.showImage2("src/Concierto/recursos/musica.jpg",550,750);
         s.setBounds(0, 0, 600, 800);
         s2.setBounds(600,0,300,300);
+        PlayerC musicap =new PlayerC(songs,s2,25);
+        Runnable mostrarMusica=new Runnable() {
+            @Override
+            public void run() {
+                musicap.run();
+            }
+        };
+        Thread musica =new Thread(mostrarMusica);
+        musica.start();
     }
 
     @Override
