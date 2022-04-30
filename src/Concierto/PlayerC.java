@@ -69,6 +69,7 @@ class PlayerC implements PlayerACB, Runnable {
         s.cls();
         s.repaint();
         s.showImage2(c.getSrcImagen(),300,300);
+        System.out.println(c.getSrcImagen());
         s.setBounds(600,0,400,450);
         s.out("\n"+c.toString(),"Helvetica", 16, Colors.BeniukonBronze);
     }
